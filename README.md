@@ -473,7 +473,7 @@ Your application is always under threat, even if it's some home-page application
 
 ---
 
-## Stage 6. Your Programming Language
+## Stage 6. Programming Language
 
 There are many programming languages. However, they have a lot in common, some more, some less. This stage will only touch on frequently encountered items in most popular programming languages. The stage will not be clearly divided into gradations, as much depends on the language itself, its capabilities and its extensions.
 
