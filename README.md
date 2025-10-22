@@ -43,7 +43,7 @@ If you want to change something (item, link, typo) - create an issue or make a P
 3. [Stage 3. Databases](#stage-3-databases)
 4. [Stage 4. HTTP Protocol](#stage-4-http-protocol)
 5. [Stage 5. Security](#stage-5-security)
-6. [Stage 6. Your Programming Language](#stage-6-your-programming-language)
+6. [Stage 6. Programming Language](#stage-6-your-programming-language)
 7. [Stage 7. Email](#stage-7-email)
 8. [Stage 8. Full-Text Search](#stage-8-full-text-search)
 9. [Stage 9. Logs and Metrics](#stage-9-logs-and-metrics)
