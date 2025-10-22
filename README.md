@@ -1,929 +1,1081 @@
 # 🚀 Backend Developer Roadmap
 
-## 📖 About This Document
+## What is this?
 
-This document contains a comprehensive roadmap of skills frequently required for backend developers of web applications. The roadmap is divided into **stages** (topics), with each stage broken down into individual items.
+This document contains a roadmap of skills frequently required for backend developers of web applications. The document is divided into stages (topics). Each stage is divided into items. Each item in the document assumes that:
 
-### What You Should Know
+- The backend developer knows what it is and what problem it solves
+- The backend developer knows why and when it should be applied
+- The backend developer knows how to work with it or knows where to look it up
+- During development or design, the backend developer remembers them and takes them into account in the application
 
-For each item in this document, a backend developer should:
+Understanding the principle of operation of each item will be an additional bonus in understanding the entire topic, but this can take a lot of time. Study as you wish and as needed.
 
-- ✅ Know what it is and what problem it solves
-- ✅ Understand when and why to apply it
-- ✅ Know how to work with it or where to find references
-- ✅ Keep it in mind during development and design
+## How to work with the document?
 
-Understanding the underlying principles of each item is a bonus for comprehensive knowledge, though it may be time-consuming. Study these at your own pace and as needed.
+Stages and items are arranged in the recommended order for study. Simply follow from top to bottom.
 
----
+## How to work with document items?
 
-## 📚 How to Use This Document
+Each item is easily googled and has a Wikipedia page. Links are provided if there is alternative documentation — clearer and/or more detailed. Some links may require VPN. Wikipedia links are provided for clarification if the article title is not obvious or articles could be confused.
 
-Stages and items are arranged in the **recommended learning order**. Simply follow from top to bottom.
+Quotes indicate explanations for why you should know this and/or where you might encounter it. If there is no explanation, either it hasn't been added yet, or it's already clear.
 
-Each item is easily searchable and typically has a Wikipedia page. Links are provided when alternative documentation exists that is clearer or more detailed. Some links may require VPN access.
+## Is there a skill division?
 
-> 💡 **Note:** Quoted text provides explanations about why you should know something and where you might encounter it.
+Each item is divided into gradations: **junior** 🌱, **middle** 🌿, **middle+** 🌳 (also known as high middle). Gradations are used to help prioritize different topics — what should be studied first. This uses the generally accepted gradation of skills and areas of responsibility, where senior is middle+ with soft skills. In this document, the maximum gradation level will be middle+, since this document focuses on hard skills.
 
----
+The **guru** ⚡ label means that this item is for deeper and more advanced study of the topic (if you have time).
 
-## 🎯 Skill Levels
+## What is the document status?
 
-Each item is categorized by skill level to help you prioritize your learning:
+The document is still in the process of additions and corrections. Ideally, each item should have a gradation, an explanation, and a link to good documentation. We're far from ideal, but it's a start!
 
-| Level | Icon | Description |
-|-------|------|-------------|
-| **Junior** | 🌱 | Fundamental skills - start here |
-| **Middle** | 🌿 | Intermediate skills - build on fundamentals |
-| **Middle+** | 🌳 | Advanced skills - master level |
-| **Guru** | ⚡ | Deep dive topics - for those who want to go further |
-
-> 📌 The maximum skill level in this document is **middle+** (🌳), as the focus is on hard skills. Senior level typically includes middle+ skills combined with soft skills.
+If you want to change something (item, link, typo) — create an issue or make a PR. If you want to discuss the document — create a discussion in discussions.
 
 ---
 
-## 📝 Document Status
+## Contents
 
-This document is continuously being updated and refined. Ideally, each item should have a skill level, explanation, and link to quality documentation.
-
-**Want to contribute?** 
-- 🐛 Found a bug or typo? Create an issue or submit a PR
-- 💬 Want to discuss? Use the discussions section
-
----
-
-## 📑 Table of Contents
-
-1. [🐳 Docker Virtualization](#stage-1-docker-virtualization)
-2. [🐧 Linux](#stage-2-linux)
-3. [💡 General Knowledge](#stage-3-general-knowledge)
-4. [🌐 Networking](#stage-4-networking)
-5. [💾 Databases](#stage-5-databases)
-6. [📡 HTTP Protocol](#stage-6-http-protocol)
-7. [🔒 Security](#stage-7-security)
-8. [⚙️ Your Programming Language](#stage-8-your-programming-language)
-9. [📧 Email](#stage-9-email)
-10. [🔍 Full-Text Search](#stage-10-full-text-search)
-11. [📊 Logs and Metrics](#stage-11-logs-and-metrics)
-12. [🏗️ Design and Development](#stage-12-design-and-development)
+1. [Stage 1. Docker Virtualization](#stage-1-docker-virtualization)
+2. [Stage 2. Linux](#stage-2-linux)
+3. [Stage 3. General Knowledge](#stage-3-general-knowledge)
+4. [Stage 4. Networking](#stage-4-networking)
+5. [Stage 5. Databases](#stage-5-databases)
+6. [Stage 6. HTTP Protocol](#stage-6-http-protocol)
+7. [Stage 7. Security](#stage-7-security)
+8. [Stage 8. Your Programming Language](#stage-8-your-programming-language)
+9. [Stage 9. Email](#stage-9-email)
+10. [Stage 10. Full-Text Search](#stage-10-full-text-search)
+11. [Stage 11. Logs and Metrics](#stage-11-logs-and-metrics)
+12. [Stage 12. Design and Development](#stage-12-design-and-development)
 
 ---
 
-## Stage 1. 🐳 Docker Virtualization
+## Stage 1. Docker Virtualization
 
-First, set up a virtual machine for experimentation and research. If something goes wrong, you can always recreate the virtual machine.
+To begin, you need to set up a virtual machine for experiments and research. If something goes wrong, the virtual machine can always be recreated.
 
-There are many virtualization systems, but Docker stands out. Docker is a popular tool for desktop virtualization. On production servers, it's less common, as **Kubernetes (k8s)** is more popular there. Docker isn't the only virtualization system—close alternatives include **Lima** and **Podman** (something between Docker and k8s).
+There are many virtualization systems, but Docker stands out among them. Docker is a popular tool for desktop virtualization. On production servers, it is used to a lesser extent, as Kubernetes (aka k8s) is more popular there. Docker is not the only virtualization system, the closest analogues are Lima, Podman (something between Docker and k8s).
 
-### Learning Path
-
-- 🌱 **Install Docker**
-- 🌱 **Run a container with Linux Ubuntu** (latest LTS version) and launch bash console
-- 🌱 **Install a convenient application** for managing images and containers (Kitematic, Portainer, etc.) or get comfortable with Docker console commands. Docker Desktop already has a dashboard for managing images and containers
-- 🌿 **docker-compose** for spinning up container clusters
-  > 💡 For production applications, multiple services are typically required (database, cache, HTTP server, etc.), and packing everything into one Docker container is problematic due to virtualization specifics. Compose helps launch multiple containers and connect them together.
+- Install docker 🌱
+- Run a container with Linux Ubuntu, the latest LTS version. Launch bash (console) of the container 🌱
+- Install a convenient application for managing images and containers Kitematic, Portainer, etc. Or get comfortable with Docker console commands. Docker-desktop already has its own dashboard for managing images and containers 🌱
+- **docker compose** for spinning up a cluster of containers 🌿
+  > For a working application, as a rule, several different services are required (database, cache, http-server, etc.) and packing all this into one Docker container will be problematic, simply due to the specifics of virtualization itself. This is where compose will help to launch a bunch of containers and connect them together.
 
 ---
 
-## Stage 2. 🐧 Linux
+## Stage 2. Linux
 
-Study the Linux installed in your container. Linux is de facto the server OS for most web applications. This section discusses Linux, though (almost) everything is also relevant for other POSIX-compatible systems (e.g., BSD family, including macOS). However, there may be differences. Ubuntu is typically chosen as a starting Linux distribution, but you can use the most compact one—**Alpine**—which is often used in virtualization.
+Study Linux installed in the container. Linux, de facto, is the server OS for most web applications. This section will discuss Linux, although (almost) everything is also relevant for other POSIX-compatible systems. For example, for the BSD family, including MacOS. However, there may be differences. As a starting Linux distribution, Ubuntu is usually chosen, but you can take the most compact - Alpine, which is often used in virtualization.
 
-### 📦 Package Management
+- **Installing packages and updating the system** via apt/apt-get in Ubuntu/Debian and apk in Alpine 🌱
+  > During research and various trials, you will have to install, update, and reinstall many Linux packages many times. It's better to immediately learn how these commands work. Basic operations needed: find, install, update, delete.
 
-- 🌱 **Installing packages and updating the system** via `apt`/`apt-get` in Ubuntu/Debian and `apk` in Alpine
-  > 💡 During research and experimentation, you'll need to install, update, and reinstall many Linux packages. Learn these commands early. Basic operations needed: find, install, update, remove.
+- **Basic bash skills** (improved sh aka shell) 🌱
+  > In Linux-like systems, bash permeates everything. You are guaranteed to encounter it and there will be cases when you need to write bash/shell scripts.
 
-### 💻 Bash Basics
+- **Basic bash syntax** 🌿
+  > In fact, this is the only scripting language that is guaranteed to be installed in the system.
+  - Control operators if, for and while
+  - Logical operators ;, &&, ||
+  - Executing expressions \`cmd\` and $(cmd)
 
-- 🌱 **Basic bash skills** (improved sh, aka shell)
-  > 💡 In Linux-like systems, bash permeates everything. You're guaranteed to encounter it and will need to write bash/shell scripts.
+- **Basic commands for working with the file system** cd, ls, find, cat, cp, mv, mkdir, rmdir, rm 🌱
+- **Calling manuals** via man command 🌱
+  > Through this command you can get help on any command, operation, files and even source code.
 
-- 🌿 **Basic bash syntax**
-  > 💡 This is essentially the only scripting language guaranteed to be installed on the system.
-  - Control operators: `if`, `for`, `while`
-  - Logical operators: `;`, `&&`, `||`
-  - Execution expressions: `` `cmd` `` and `$(cmd)`
+- **Command pipelines** via operator | (cmd1 | cmd2 | cmd3) 🌱
+  > Linux has a large number of commands for data processing and for solving various tasks that you may need to combine through pipelines.
 
-### 📁 File System Commands
+- **Data processing commands** cat, tail, head, grep, awk, sed 🌿
+  > This set will be needed for scanning and analyzing logs or large volumes of text data.
 
-- 🌱 **Basic commands for working with the file system**: `cd`, `ls`, `find`, `cat`, `cp`, `mv`, `mkdir`, `rmdir`, `rm`
+- **Archive commands** zcat, gzip, gunzip, tar, zgrep 🌿
+  > As a rule, nobody stores logs or large volumes of text data "as is", usually it's a gz or tar.gz (tgz) archive.
 
-- 🌱 **Calling manuals** via `man` command
-  > 💡 This command provides help for any command, operation, files, and even source code.
+- **Console editors** vim, nano. Open file, make changes, save 🌱
+  > Editing a file from the console is not that rare. By the way, to exit vim: esc, type :q!, enter.
 
-- 🌱 **Command pipelines** via `|` operator (`cmd1 | cmd2 | cmd3`)
-  > 💡 Linux has many data processing commands that you can combine through pipelines to solve various tasks.
+- **Console viewers** less, zless. Open, find word, close 🌱
+  > Editors are redundant to just view file contents. Viewers also handle non-"standard" files for editors.
 
-### 🔧 Data Processing
+- **Console file manager** mc 🌱
+  > Console file managers, like Midnight Commander, provide a UI that makes working with typical file operations more convenient and visual.
 
-- 🌿 **Data processing commands**: `cat`, `tail`, `head`, `grep`, `awk`, `sed`
-  > 💡 This set is needed for scanning and analyzing logs or large volumes of text data.
+- **Background tasks**, operator &, commands jobs, fg, bg 🌿
+  > The operator will allow you to run multiple commands in one shell session.
 
-- 🌿 **Archive commands**: `zcat`, `gzip`, `gunzip`, `tar`, `zgrep`
-  > 💡 Typically, logs or large text volumes aren't stored as-is but in gz or tar.gz (tgz) archives.
+- **Signal ignoring command** nohup 🌿
+  > The command will allow, when the shell session ends, to keep alive launched background tasks until their logical completion.
 
-### ✏️ Editors and Viewers
+- **Streams, stream redirection**, operators >, >>, < 🌱
+  > Where to write output and where errors will help these operations indicate.
 
-- 🌱 **Console editors**: `vim`, `nano` (open file, make changes, save)
-  > 💡 Editing files from the console isn't uncommon. BTW, to exit vim: `esc`, type `:q!`, `enter`.
+- **Master the console completely** ⚡
 
-- 🌱 **Console viewers**: `less`, `zless` (open, find word, close)
-  > 💡 Editors are overkill just to view file contents. Viewers also handle non-standard files.
+### Processes
 
-- 🌱 **Console file manager**: `mc`
-  > 💡 Console file managers like Midnight Commander provide a UI that makes typical file operations more convenient and visual.
+- **Process concept** 🌱
+  > As in all other OSs, running applications in Linux are represented by processes.
 
-### ⚙️ Background Tasks
+- **Process analysis commands** top, htop, ps (ps aux) 🌱
+  > This is like a "task manager" in the Linux world, allowing you to monitor system processes.
 
-- 🌿 **Background tasks**: `&` operator, `jobs`, `fg`, `bg` commands
-  > 💡 The operator allows running multiple commands in one shell session.
+- **Parent process, child process** 🌿
+  > Processes don't appear out of nowhere, something launches them. Understanding the process hierarchy will facilitate working with them and make understanding multiprocess applications easier.
 
-- 🌿 **Signal ignoring command**: `nohup`
-  > 💡 Allows background tasks to continue running after shell session termination until logical completion.
+- **Master-worker processes, daemon** 🌿
+  > This is one of the common types of computation parallelization in applications. Many programs use exactly this parallelization approach.
 
-- 🌱 **Streams and stream redirection**: `>`, `>>`, `<` operators
-  > 💡 These operations help direct output and errors to the right places.
+- **Zombie processes**. Where they come from and how to deal with them 🌳
+  > This is a type of problem with parallelizing computations through child processes. Occurs when the master process has problems or bugs.
 
-- ⚡ **Master the console completely** - *guru level*
+- **Sending signals to processes** 🌱
+  > This is the main lever of influence on processes by third-party applications (system or yours).
 
-### 🔄 Processes
+- **Study commands** kill, pkill, killall 🌱
+- **Purpose of signals** SIGKILL, SIGTERM, SIGINT, SIGHUP, SIGSEGV 🌿
+- **System call (syscall)** 🌳
+  > System call (Linux kernel API call) is not a free operation and it's better to keep them under control in high-load applications.
 
-- 🌱 **Process concept**
-  > 💡 Like all other OSs, running applications in Linux are represented as processes.
+- **Command for analyzing system calls** of a process via strace 🌳
+  > The simplest and most accessible way to see what system calls a process makes in real time.
 
-- 🌱 **Process analysis commands**: `top`, `htop`, `ps` (`ps aux`)
-  > 💡 Linux's "task manager" for monitoring system processes.
+### File Descriptors
 
-- 🌿 **Parent process, child process**
-  > 💡 Processes don't appear from nowhere—something launches them. Understanding process hierarchy makes working with them easier and simplifies understanding multiprocess applications.
+- **Study the descriptor concept** 🌿
+  > Any data stream (incoming and/or outgoing) is represented as descriptors. You will (most likely) read or write something through a descriptor.
 
-- 🌿 **Master-worker processes, daemon**
-  > 💡 One of the common types of computation parallelization in applications. Many programs use exactly this parallelization approach.
+- **Standard descriptors** STDIN, STDOUT, STDERR and their numbering 🌿
+  > Every stream in a process is numbered and there are "reserved" numbers for certain streams.
 
-- 🌳 **Zombie processes**: where they come from and how to deal with them
-  > 💡 A problem type in parallelization through child processes. Occurs when the master process has issues or bugs.
+- **Streams, sockets and unix-sockets** 🌿
+  > These are all varieties of descriptors that you will have to work with. Descriptor rules apply to all of them, well, since they are descriptors.
 
-- 🌱 **Sending signals to processes**
-  > 💡 The main lever for external applications (system or yours) to affect processes.
+- **Descriptor limitations** 🌳
+  > Not an uncommon problem for applications when it hits the limit of open descriptors.
 
-- 🌱 **Commands**: `kill`, `pkill`, `killall`
+- **Command for analyzing open descriptors** of a process via lsof 🌳
+  > For debugging an application, you always need to know what the application is communicating with (works great paired with strace, matching descriptor numbers).
 
-- 🌿 **Signal purposes**: `SIGKILL`, `SIGTERM`, `SIGINT`, `SIGHUP`, `SIGSEGV`
+### Users
 
-### 🔧 System Calls
+- **Users** 🌱
+- **Root user** 🌱
+  > Essentially this is the system admin. Avoid using root (even in containers) as access to root gives access to the entire system, which all malware dreams of.
 
-- 🌳 **System call (syscall)**
-  > 💡 System calls (Linux kernel API calls) aren't free operations and should be controlled in high-load applications.
+- **Super user, commands** su and sudo 🌱
+  > Nobody will give you root in production, but you may well have a "privileged" user who can use sudo.
 
-- 🌳 **Analyzing system calls**: `strace`
-  > 💡 The simplest and most accessible way to see what system calls a process makes in real-time.
+### File System
 
-### 📋 File Descriptors
+- **File system** 🌱
+- **Command** stat 🌱
+- **File system rights and access** 🌱
+  > Excessive access leads to security holes, lack of access leads to bugs in the application. Consciously set where x (especially for directories), where r, and where w.
 
-- 🌿 **File descriptor concept**
-  > 💡 Any data stream (incoming and/or outgoing) is represented as descriptors. Reading or writing will (most likely) be through descriptors.
+- **Understanding access descriptions** like --xr-xrwx and 0137 (octal) for files and directories 🌱
+  > Usually this is how you will see access levels in consoles.
 
-- 🌿 **Standard descriptors**: `STDIN`, `STDOUT`, `STDERR` and their numbering
-  > 💡 Every stream in a process is numbered, and there are "reserved" numbers for specific streams.
+- **Executable files, shebang** 🌱
+- **Changing access rights** via chmod, chown commands 🌿
+- **Working with disks** 🌳
+  > Need to know where, how and where various disks or media are mounted. It happens that an application can work with several disks at once, some may be network disks.
 
-- 🌿 **Streams, sockets, and unix-sockets**
-  > 💡 All varieties of descriptors you'll work with. Descriptor rules apply to all of them.
+### Links
 
-- 🌳 **Descriptor limits**
-  > 💡 A common application problem is hitting the open descriptor limit.
+- **Links on the file system** 🌱
+- **Symlink (aka symbolic link)** 🌱
+  > The most common type of link. Widely used in Linux and in package managers of different languages. You will use this too.
 
-- 🌳 **Analyzing open descriptors**: `lsof`
-  > 💡 For debugging, always know what the application is communicating with (works great with strace, matching descriptor numbers).
+- **Hardlink (aka hard link)** 🌿
+  > Rare use case for links. Needed if you need to "deduplicate" a large volume of files. Essentially allows you to create several names for one file.
 
-### 👥 Users and Permissions
+### Services
 
-- 🌱 **Users**
-- 🌱 **Root user**
-- 🌱 **File permissions**: read, write, execute for user, group, others
-- 🌱 **Changing permissions**: `chmod`, `chown` commands
-- 🌱 **`sudo` command** for elevated privileges
+- **Starting and stopping systemd services** 🌿
+  > Linux is essentially just a bunch of running applications as services.
 
-### 🌍 Environment Variables
+### SSH
 
-- 🌱 **Environment variables**
-  > 💡 A simple and reliable way to configure applications.
+- **SSH** 🌱
+  > The most accessible way to launch a shell on a remote machine is to use SSH. Used everywhere.
 
-- 🌱 **Viewing and setting variables**: `export`, `env`, `printenv`
-- 🌱 **Standard variables**: `PATH`, `HOME`, `USER`
+- **Generating your own ssh-rsa key** via ssh-keygen 🌱
+  > Without it you won't get on hosts via SSH.
 
-### 🌐 Networking
+- **Using public ssh-rsa key** to log into a remote machine (use a second container with Linux) 🌱
 
-- 🌱 **Basic networking commands**: `ping`, `curl`, `wget`, `netstat`, `ss`
-- 🌿 **Network configuration**: `ifconfig`, `ip`
-- 🌿 **Checking connections**: `telnet`, `nc` (netcat)
+### Content Transfer
 
-### 📊 System Information
+- **Content transfer** 🌱
+  > There is a need to transfer logs, database dumps and other files between machines or to yourself.
 
-- 🌱 **System information commands**: `uname`, `hostname`, `uptime`, `df`, `du`
-- 🌿 **Resource monitoring**: `free`, `vmstat`, `iostat`
+- **scp** 🌱
+  > The simplest tool for transferring files between hosts via ssh.
 
-### 📝 Logs
+- **rsync** 🌿
+  > Perhaps the most powerful tool for transferring files between hosts with lots of settings, rules and protocols.
 
-- 🌱 **System logs location**: `/var/log/`
-- 🌿 **Log viewing**: `journalctl` (systemd)
+- **rclone** 🌿
+  > "rsync" for cloud storage. Universal tool for working with content that is stored in clouds or somewhere on the network.
+
+### Task Schedulers
+
+- **Crontab command** and crond launch
+  > The most common and simple task scheduler, with very flexible schedule settings
+
+- **Command** at 🌿
+  > When you want to run a task once, at a certain time. In crontab this will require separately creating a schedule, which greatly complicates automation and clutters the entire schedule.
+
+### Memory
+
+- **RAM** 🌿
+- **Command** free, meta information /proc/meminfo 🌿
+  > Always estimate how much memory the application or scripts will need so as not to be killed by the system.
+
+- **Out Of Memory (OOM) error** and cause of occurrence. OOM-killer 🌳
+  > This is exactly what happens when you exceed all acceptable limits of memory consumption in the system.
+
+### System Logs
+
+- **System logs. Why and how to view** 🌿
+  > When problems occur, logs are the only thing that can lead to the essence of the problem. In addition to application logs, it's worth looking at system logs, sometimes its problem can lead to problems in applications. Some logs worth highlighting:
+
+- **dmesg** (driver messages) — important messages from Linux components, including from OOM-killer 🌿
+- **syslog** — system log 🌿
+  > There may be messages from the Linux kernel, various services, network interfaces and much more.
+
+### Problems in Linux
+
+- **Problems in Linux and consequences** 🌱
+  > There are many, but let's highlight only a few.
+
+- **Kernel panic** 🌱
+  > BSoD analogue for Linux. The most unpleasant system error, clearly hinting that the system is not stable.
+
+- **Segmentation fault (aka segfault)** 🌿
+  > Not as rare an application error as one would like. The application tried to work with memory it doesn't have access to.
+
+- **Core dump (aka coredump)** 🌳
+  > Result of segmentation fault processing by the system. Coredump may be needed by the developer of the crashed application to analyze the program's state at the moment of crash.
 
 ---
 
-## Stage 3. 💡 General Knowledge
+## Stage 3. General Knowledge
 
-### Data Formats
+Some items are difficult to categorize in this document. But they are indispensable. These are basic things that are used everywhere in code, in systems, "under the hood" of your programming language.
 
-- **JSON** - *junior*
-- **XML** - *junior*
-- **YAML** - *junior*
-- **CSV** - *junior*
-- **Protocol Buffers (protobuf)** - *middle*
-- **MessagePack** - *middle+*
+- **Regular expressions**. You can play with regular expressions here. Although each language may have its own vision of regular expressions, in general sense (and syntax) they are similar 🌿
+  > Sooner or later you will have to parse data from text or check data, and this is where regular expressions will be needed.
 
-### Encoding
+### Cryptography
 
-- **Character encoding concept** - *junior*
-- **ASCII** - *junior*
-- **Unicode** - *junior*
-- **UTF-8, UTF-16** - *junior*
-- **Base64** - *junior*
-- **URL encoding** - *junior*
+- **Cryptography** 🌱
+  > Don't be scared. The item implies practical application of cryptographic functions (what various functions are needed for), not studying cryptography itself.
 
-### Regular Expressions (RegEx)
+- **Hashes and hash functions**, including crc32, md5, sha1, sha256 🌱
+- **Digital signatures** 🌱
+  > To protect data from forgery, digital signatures of the same data are used.
 
-- **Basic regex syntax** - *junior*
-- **Metacharacters**: `.`, `*`, `+`, `?`, `^`, `$`, `[]`, `()`, `|` - *middle*
-- **Flags**: `i`, `g`, `m` - *middle*
-- **Lookahead and lookbehind** - *middle+*
+- **Salt for signatures** 🌿
+  > In theory (and in practice) a hash function can be determined and to further protect from "hacking" your hash, using so-called salt.
 
-### Date and Time
+- **Hash collisions** 🌿
+  > Hash functions can return the same result (hash) on different data, which can lead to problems and bugs. It's better to know what the probability of collisions for a hash function is and how to avoid them.
 
-- **Timestamps** - *junior*
-- **Unix time** - *junior*
-- **ISO 8601 format** - *junior*
-- **Timezones** - *junior*
-- **UTC** - *junior*
+- **Symmetric and asymmetric encryption** 🌳
+  > Sometimes you have to encrypt data and it's important to choose an encryption strategy.
 
-### Version Control
+- **TLS operation principle** 🌳
+  > Meaning how CA root and intermediate work, what's behind the certificate.
 
-- **Git basics** - *junior*
-  - Init, clone, add, commit, push, pull
-  - Branches, merge, rebase
-  - Status, log, diff
-- **Git workflows**: feature branch, gitflow - *middle*
-- **Pull requests / merge requests** - *junior*
-- **Resolving conflicts** - *middle*
+### Git
 
-### Algorithms and Data Structures
+- **Basic git work** 🌱
+  > In fact, this is the default version control system in the IT world.
 
-- **Big O notation** - *middle*
-- **Arrays, Lists** - *junior*
-- **Hash tables, Sets** - *junior*
-- **Stacks, Queues** - *middle*
-- **Trees, Graphs** - *middle*
-- **Sorting algorithms**: quicksort, mergesort, heapsort - *middle*
-- **Search algorithms**: binary search, DFS, BFS - *middle*
+- **Committing changes (commit)** 🌱
+- **Sending changes (push/pull)** 🌱
+- **Creating branches and tags (branch/tag)** 🌱
+- **Merging branches (merge)** 🌱
+- **Master git completely** ⚡
+
+### Data Structures
+
+- **Data structures** 🌱
+- **Hash tables** 🌿
+  > Tables are often used in programming languages themselves (associative arrays, objects, etc.)
+
+- **Queue and stack** 🌱
+  > The simplest data structures that will often have to be used daily in code.
+
+- **Linked list and doubly linked list** 🌿
+  > These data structures are often used in development as they are the simplest way to connect elements with themselves. They are also actively used inside your language ("under the hood") everywhere.
+
+### Data Storage and Transfer Formats
+
+**Text** 🌱
+> Text formats are also used for storing application configuration
+
+- JSON
+- YAML
+- XML
+
+**Binary** 🌿
+> Binary formats are used solely for storing and transferring data.
+
+- MessagePack
+- BSON (binary analogue of JSON)
+- ProtoBuf
 
 ---
 
 ## Stage 4. Networking
 
-### OSI Model
+Networking in development is the most important and, often, least noticeable part.
 
-- **7 layers of OSI model** - *middle*
-- **Layer responsibilities** - *middle*
+- **Basic understanding of how networking works** 🌱
+- **TCP protocol** 🌿
+  > You are unlikely to read TCP packets. But it's useful to know HOW TCP works, this will allow you to understand why even with perfect "internet" the application can still lag on the network.
 
-### TCP/IP
+- **TCP packet** ⚡
+  > You're unlikely to have to work with TCP packet directly, however from its structure you can glean some useful information about the TCP protocol in general.
 
-- **IP address** - *junior*
-- **IPv4 vs IPv6** - *middle*
-- **Subnets and CIDR** - *middle*
-- **TCP protocol** - *middle*
-  - Three-way handshake
-  - Reliable delivery
-  - Flow control
-- **UDP protocol** - *middle*
-  - Unreliable, connectionless
-  - Use cases
+- **Flags** ACK, SYN, FIN and others 🌳
+  > Flags are responsible for organizing, confirming transmission and closing TCP connections.
+
+- **Buffers (window size)** 🌿
+- **TCP problems** 🌳
+  > TCP is a very old protocol that no longer meets modern realities.
+
+- **UDP protocol** 🌿
+  > The simplest network protocol of the family. Understanding its operation is required. HTTP/3.0, DNS work on UDP protocol, and understanding UDP will give some understanding of HTTP/3.0 operation.
+
+- **UDP packet** ⚡
+  > You'll only have to study if you need to create your own data transfer protocol to replace the outdated TCP.
+
+### Network Problems
+
+- **Network problems** 🌱
+  > There are always many. But it's worth highlighting those that clearly affect network speed. For the most part, these problems are inherent to TCP, but can also appear where TCP is emulated — on another protocol (for example UDP)
+
+- **Packet loss** 🌱
+- **Reordering** 🌿
+- **Jitter** 🌿
+- **Round-Trip Time (RTT aka lag)** 🌱
+- **Network latency (delay)** 🌿
+
+### IP
+
+- **IPv4, IPv6**
+  > Basic difference between protocols should be known, at least to correctly create an IP column in the database and processing in code.
 
 ### DNS
 
-- **DNS purpose** - *junior*
-- **DNS records**: A, AAAA, CNAME, MX, TXT, NS - *middle*
-- **DNS resolution process** - *middle*
-- **DNS caching** - *middle*
-- **DNS tools**: `nslookup`, `dig` - *middle*
+- **DNS** 🌱
+  > Your code will work with domains 24/7 as nobody uses pure IP to connect to anything. Knowing how DNS works and managing domain resolution in the system can simplify debugging in some cases.
 
-### HTTP/HTTPS
+- **How domain resolution works** 🌱
+- **DNS records** 🌿
+- **Main** MX, CNAME, NS, A, AAAA, TXT 🌿
+- **Other records** 🌳
+- **File** /etc/hosts 🌱
+  > The simplest and most accessible way to change the IP of any domain, locally, of course.
 
-See dedicated [Stage 6: HTTP Protocol](#stage-6-http-protocol)
+- **File** /etc/resolv.conf 🌳
+  > Configuration for the system on how and where domains should be resolved.
 
-### Network Tools
+- **Console commands for working with domains**: whois, dig, host 🌱
+  > To identify a problem with a domain you need to learn to work with these commands. Analyze domains both through the default DNS and through public ones, such as 1.1.1.1 or 8.8.8.8.
 
-- **`ping`** - testing connectivity - *junior*
-- **`traceroute`** - route analysis - *middle*
-- **`nmap`** - port scanning - *middle*
-- **`tcpdump`, `wireshark`** - packet capture - *middle+*
+- **Route tracing** 🌿
+- **Traffic analysis** via tcpdump + wireshark ⚡
+  > Not simple, but very effective way to "see" and analyze traffic in a convenient UI.
 
-### Ports
-
-- **Port concept** - *junior*
-- **Well-known ports**: 80, 443, 22, 21, 25, 3306, 5432 - *junior*
-- **Port ranges**: well-known (0-1023), registered (1024-49151), dynamic (49152-65535) - *middle*
-
-### Load Balancing
-
-- **Load balancer concept** - *middle*
-- **Types**: Layer 4 vs Layer 7 - *middle+*
-- **Algorithms**: round-robin, least connections, IP hash - *middle*
-- **Health checks** - *middle*
-
-### Reverse Proxy
-
-- **Reverse proxy concept** - *middle*
-- **Use cases**: caching, SSL termination, load balancing - *middle*
-- **Popular tools**: Nginx, HAProxy, Traefik - *middle*
-
-### CDN
-
-- **Content Delivery Network concept** - *middle*
-- **Edge servers** - *middle*
-- **CDN benefits**: latency reduction, DDoS protection - *middle*
+- **Master networking completely** ⚡
 
 ---
 
 ## Stage 5. Databases
 
-### SQL Databases
+Without databases — nowhere. The most common type of database is relational databases. Therefore, even junior should be able to work with them, but NoSQL databases can be familiarized with a little later.
 
-- **SQL basics** - *junior*
-  - SELECT, INSERT, UPDATE, DELETE
-  - WHERE, ORDER BY, GROUP BY, HAVING
-  - JOINs: INNER, LEFT, RIGHT, FULL
-  - Aggregate functions: COUNT, SUM, AVG, MIN, MAX
+### Relational Databases
 
-- **Database design** - *middle*
-  - Normalization (1NF, 2NF, 3NF)
-  - Primary keys, foreign keys
-  - Indexes
-  - Constraints: UNIQUE, NOT NULL, CHECK
+- **Relational databases** MySQL/Postgres/etc. 🌱
+  > MySQL implies both Oracle's MySQL and various variants like MariaDB, Percona XTraDB, etc. In general understanding of the family: MySQL/Postgres/MSSQL/etc. have similar SQL APIs, differing only in internal implementation, performance and scalability.
 
-- **Transactions** - *middle*
-  - ACID properties
-  - Isolation levels
-  - COMMIT, ROLLBACK
+- **Basic query syntax** SELECT/INSERT/UPDATE/DELETE 🌱
+- **Creating and modifying tables** 🌱
+- **Table column types**, their purpose and differences 🌱
+  - Integer types (int)
+  - Text types (text)
+  - Sets, enumerations (enum)
+  - String types (char, varchar)
+  - Decimal types (decimal)
+  - Floating point numbers (double)
+  - others
 
-- **Performance** - *middle+*
-  - Query optimization
-  - EXPLAIN plans
-  - Index strategies
-  - Query caching
+- **Creating and applying ALTER queries** 🌱
+- **Query execution analysis** via EXPLAIN, understanding EXPLAIN results 🌱
+  > The most effective way to understand why a query is slow.
 
-- **Popular SQL databases** - *middle*
-  - PostgreSQL
-  - MySQL / MariaDB
-  - SQLite
+### Performance Diagnostics
+
+**Performance diagnostics**
+> Slow queries will always appear, and the more there are, the slower your application will work. And as a rule, different databases always have analytics for finding "bottlenecks".
+
+- **Maintaining slow query logs** — slow_log 🌿
+  > You can't sit all the time monitoring all queries. It's easier to set up aggregation of slow queries.
+
+- **Reading analytics and statistics** 🌳
+  > In MySQL family this is performance_schema, in postgres this is Statistics Collector. Will help fully understand which queries work poorly, where indexes are lacking, where there are too many, and so on.
+
+### Indexes
+
+- **Indexes** 🌱
+  > Indexes are a very important part of databases. Your queries should always work "by indexes". A query without an index or with a "bad" index, on loaded projects, can guaranteed lead to application crash.
+
+- **Clustered index** 🌿
+  > This doesn't relate to computing clusters. This is a data index, by which rows are laid out in the table.
+
+- **PRIMARY index (aka primary index)** 🌱
+  > Index uniquely identifying each row in the table. As a rule, PRIMARY index is the clustered index.
+
+- **UNIQUE/regular indexes** 🌱
+- **Composite indexes** 🌱
+  > Conditions and/or sorting are rarely on one field, usually there are more. This is where composite indexes come in. Here you need to understand that in a composite index, the sequence of fields is important.
+
+- **Understanding which fields in what sequence** to add to the index for filtering and/or sorting 🌿
+- **Understanding how index trees** are built for composite indexes 🌳
+- **Understanding index operation** 🌿
+- **BTREE index building algorithm** ⚡
+  > This understanding won't make your queries faster, but will give an idea of how certain data behaves in indexes.
+
+### Joins and Grouping
+
+- **Joining tables** LEFT JOIN, RIGHT JOIN, INNER JOIN, OUTER JOIN, JOIN 🌱
+  > Data is always "smeared" across tables. To collect it, these operators will be needed.
+
+- **Data grouping** via GROUP BY 🌱
+  > Data grouping is not rare queries, as a rule, used for collecting statistics.
+
+- **Filtering after grouping** 🌱
+- **Functions for working with groups** MAX/MIN/AVG/etc. 🌱
+- **Understanding and purpose of foreign keys** 🌿
+  > Foreign keys are often used to maintain data consistency in the database.
+
+### Transactions
+
+- **Transactions** 🌿
+  > To perform several operations atomically (as one operation), transactions are used.
+
+- **Transaction isolation levels** 🌿
+- **Deadlock** and how not to allow it 🌳
+- **Triggers** on INSERT/UPDATE/DELETE 🌿
+  > You shouldn't actively use triggers. Nevertheless, they can be useful in some debugging or maintenance cases.
+
+### Tree Storage
+
+- **Tree storage** 🌱
+  > It's not easy to save a tree structure in a relational database. There are several algorithms with their pros and cons. Actually relevant for other types of databases too.
+
+- **Parent-child algorithm** 🌱
+  > Classic variant "with parent_id" in child elements. Simple and "cheap" for inserting elements into trees. But such trees are expensive "to assemble".
+
+- **Nested sets algorithm** 🌿
+  > Algorithm allows quite cheaply to collect trees with various modifications and segments. But expensive for inserting elements into trees.
 
 ### NoSQL Databases
 
-- **Document databases** - *middle*
-  - MongoDB
-  - CouchDB
-  - Document structure, collections
+- **Document-oriented database** (part of NoSQL databases) — MongoDB 🌿
+  > Among all NoSQL, MongoDB is the most popular.
 
-- **Key-value stores** - *middle*
-  - Redis
-  - Memcached
-  - Use cases: caching, sessions
+- **Data types in collections**, their purpose and differences 🌿
+- **Query execution analysis** via explain(), understanding its results 🌿
+- **Understanding index operation** (similar to SQL indexes with small differences) 🌿
+  - Sparse index property
+  - Partial index property
+  - TTL index property
+  - Geospatial index
+  - Text index
 
-- **Column-family stores** - *middle+*
-  - Cassandra
-  - HBase
-  - Wide-column storage
+- **Nested objects, arrays** 🌿
+- **Aggregations** 🌳
+- **Working with replication** 🌳
+- **Working with MongoDB cluster** 🌳
 
-- **Graph databases** - *middle+*
-  - Neo4j
-  - OrientDB
-  - Graph queries, relationships
+### Redis
 
-### Database Concepts
+- **Redis** 🌱
+  > Universal data storage tool with a focus on performance. Can be both a fast permanent storage and a reactive caching, temporary storage.
 
-- **Connection pooling** - *middle*
-- **Replication** - *middle+*
-  - Master-slave
-  - Master-master
-  - Replication lag
+- **Basic work with keys** 🌱
+- **Working with lists** 🌱
+- **Working with hashes** 🌱
+- **Working with sets** 🌱
+- **Sorted sets** 🌿
+- **Transactions**, but in another, its own, understanding
+- **Working with Lua** 🌿
+  > Gives the ability to run any set of commands atomically, additionally equipped with logic.
 
-- **Sharding** - *middle+*
-  - Horizontal vs vertical partitioning
-  - Sharding strategies
+### Database Problems
 
-- **Backup and recovery** - *middle*
-- **Migration tools** - *middle*
+- **Problems in databases** 🌱
+- **Deadlock** 🌿
+- **Numeric field overflow** (including autoincrement) 🌱
+- **Full scan** 🌿
+- **Split-brain** 🌳
 
 ---
 
 ## Stage 6. HTTP Protocol
 
-### HTTP Basics
+Every WEB developer should understand the HTTP protocol. A developer who doesn't know the HTTP protocol is like a shoemaker without shoes. Therefore, even junior should know a lot about the HTTP protocol.
 
-- **HTTP versions**: HTTP/1.1, HTTP/2, HTTP/3 - *middle*
-- **Request structure**: method, headers, body - *junior*
-- **Response structure**: status code, headers, body - *junior*
+- **Understanding the general protocol format**: where are headers and where is the body 🌱
+- **Get comfortable with the Network tab** in browser inspector 🌱
+  > In the console you can observe all HTTP requests from the page and even make them yourself through the fetch function.
 
 ### HTTP Methods
 
-- **GET** - retrieve resource - *junior*
-- **POST** - create resource - *junior*
-- **PUT** - update/replace resource - *junior*
-- **PATCH** - partial update - *middle*
-- **DELETE** - remove resource - *junior*
-- **HEAD, OPTIONS** - *middle*
+- **HTTP request methods. Their purpose and limitations** 🌱
+  > Each method has its purpose (just translate the method names) and, as a consequence, has its conventions and limitations.
 
-### Status Codes
+- **Main** GET, POST, HEAD 🌱
+- **Additional** PUT, DELETE, PATCH 🌿
+  > Used in REST API together with main methods
 
-- **1xx**: Informational - *middle*
-- **2xx**: Success (200, 201, 204) - *junior*
-- **3xx**: Redirection (301, 302, 304) - *middle*
-- **4xx**: Client errors (400, 401, 403, 404, 429) - *junior*
-- **5xx**: Server errors (500, 502, 503, 504) - *junior*
+- **Others** 🌳
+  > These are already narrowly focused methods, rarely will you have to work with them directly. Nevertheless, they are actively used by applications.
 
-### Headers
+### HTTP Response Codes
 
-- **Request headers**: User-Agent, Accept, Authorization, Content-Type - *junior*
-- **Response headers**: Content-Type, Content-Length, Set-Cookie, Cache-Control - *junior*
-- **CORS headers** - *middle*
-- **Custom headers** - *middle*
+- **HTTP response codes** 🌱
+- **Principle of dividing codes into groups**: 100-199, 200-299, 300-399, 400-499, 500-599 🌱
+  > Codes were created and described not in chaotic order. There is a clear division of their "spheres of influence". Even if some server comes up with its own response code, by group you can better understand the reason for such a response.
+
+- **Main (frequent)**: 200, 206, 301, 302, 304, 400, 401, 403, 404, 500, 502, 503, 504 🌱
+  > These are the most frequent response codes that you are guaranteed to encounter.
+
+- **Others** 🌿
+
+### HTTP Headers
+
+- **HTTP headers** 🌱
+- **MIME type (document type)** and Content-Type header 🌱
+- **Transfer format** application/x-www-form-urlencoded 🌱
+- **Transfer format** multipart/form-data 🌿
+- **System headers** Host, Content-Length, Content-Encoding, Transfer-Encoding 🌱
+- **HTTP caching**, cache control headers: Cache-Control, Expires, Vary, ETag, Last-Modified
 
 ### Cookies
 
-- **Cookie concept** - *junior*
-- **Cookie attributes**: Domain, Path, Expires, Secure, HttpOnly, SameSite - *middle*
-- **Session cookies vs persistent cookies** - *junior*
+- **Cookies** 🌱
+  > Currently this is the only accurate way to identify a user.
 
-### Sessions
+### CORS and CSP
 
-- **Session management** - *junior*
-- **Server-side sessions** - *middle*
-- **Token-based sessions** - *middle*
+- **Cross-Origin Resource Sharing (CORS)** 🌿
+  > For cross-domain XHR/WebSocket requests you need to learn to work with CORS, otherwise requests won't work.
 
-### HTTPS and SSL/TLS
+- **Content-Security-Policy (CSP)** 🌿
+  > To improve security you can restrict and specify what and from where can be loaded and run on the page.
 
-- **HTTPS purpose** - *junior*
-- **SSL/TLS handshake** - *middle*
-- **Certificates** - *middle*
-- **Certificate authorities** - *middle*
+### HTTP Versions
 
-### Authentication
+- **Differences in HTTP protocol versions**: HTTP/1.0, HTTP/1.1 🌿
+  > Despite the appearance of new versions of the HTTP protocol, HTTP/1.0 and HTTP/1.1 versions are still frequent in internal cluster networks.
 
-- **Basic Authentication** - *junior*
-- **Bearer tokens** - *middle*
-- **OAuth 2.0** - *middle+*
-- **JWT (JSON Web Tokens)** - *middle*
-  - Structure: header, payload, signature
-  - Use cases and limitations
+- **Console commands for HTTP requests** curl, wget 🌱
+  > On servers (hosts) there are no browsers whose convenient console can be used. There is shell and many utilities that can work with HTTP.
 
-### REST API
+- **Differences between protocols** HTTP/1.1, HTTP/2.0 and HTTP/3.0 🌳
+  > Each protocol has its own capabilities and improvements that can be used to speed up the application.
 
-- **REST principles** - *middle*
-  - Statelessness
-  - Resource-based URLs
-  - HTTP methods usage
-  - HATEOAS
+### WebSocket
 
-- **API versioning** - *middle*
-- **Pagination** - *middle*
-- **Filtering and sorting** - *middle*
-- **API documentation**: Swagger/OpenAPI - *middle*
+- **WebSocket protocol** 🌿
+  > This is an extension of HTTP/1.1 and higher for a mechanism of data exchange over one connection. Often used for chats and/or for event-driven models.
 
-### GraphQL
+- **WebRTC** ⚡
+  > If you need to organize P2P (peer-to-peer) chats or P2P streaming, then WebRTC is just for that.
 
-- **GraphQL basics** - *middle+*
-- **Queries, mutations, subscriptions** - *middle+*
-- **Schema definition** - *middle+*
+### HTTP API Formats
 
-### WebSockets
+- **HTTP API formats** 🌱
+- **REST API** 🌱
+- **RPC** 🌱
+- **GraphQL** 🌿
 
-- **WebSocket protocol** - *middle*
-- **Full-duplex communication** - *middle*
-- **Use cases**: real-time apps, chat, gaming - *middle*
+### Web Servers
 
-### HTTP/2 Features
+- **Web servers** 🌱
+- **Nginx** 🌱
+  > The most common Web server. The probability of encountering it during web application development is high.
 
-- **Multiplexing** - *middle+*
-- **Server push** - *middle+*
-- **Header compression** - *middle+*
+- **Familiarization with basic capabilities** 🌱
+- **Scalable nginx configuration** 🌿
+- **Writing simple locations** in /etc/nginx/nginx.conf for file distribution 🌱
+- **HTTP, FastCGI proxying** 🌱
+
+- **Apache httpd** 🌱
+  > One of the old but actively used broad-profile Web servers. Although it already yields to nginx in popularity, encountering it in projects is still just as easy.
 
 ---
 
 ## Stage 7. Security
 
-### Common Vulnerabilities
+Your application is always under threat, even if it's some home-page application. Botnets always lack computational resources. Hackers - data. And users - brains (no offense).
 
-- **SQL Injection** - *junior*
-  - Prevention: prepared statements, parameterized queries
+### Access Control
 
-- **XSS (Cross-Site Scripting)** - *junior*
-  - Types: reflected, stored, DOM-based
-  - Prevention: input sanitization, output encoding
+- **Types of access control** 🌿
+- **Access Control List (ACL)** 🌿
+- **Role-based access control (RBAC)** 🌿
+- **Attribute-based access control (ABAC)** 🌿
 
-- **CSRF (Cross-Site Request Forgery)** - *middle*
-  - Prevention: CSRF tokens, SameSite cookies
+### Authentication
 
-- **XXE (XML External Entity)** - *middle*
-- **SSRF (Server-Side Request Forgery)** - *middle+*
-- **Command Injection** - *middle*
-- **Path Traversal** - *middle*
+- **Authentication** 🌱
+- **Basic** 🌱
+  > The simplest type of authorization, not requiring additional computational power (servers).
 
-### Authentication & Authorization
+- **SSO (Single Sign On)** 🌱
+  > General name for authorization approach: authorization on multiple applications through one point. OAuth and OpenID are special cases of SSO.
 
-- **Authentication vs Authorization** - *junior*
-- **Password hashing** - *junior*
-  - Bcrypt, Argon2, PBKDF2
-  - Salt, iterations
+- **OAuth2** 🌿
+  > Common type of authorization through an intermediary who guarantees that you are you and can provide some user data, with their consent. Often encounter OAuth2 when you need to connect authorization through social networks. They all have OAuth2 (but each with their own modifications).
 
-- **Multi-factor authentication (MFA)** - *middle*
-- **Password policies** - *junior*
-- **Rate limiting** - *middle*
-- **Account lockout** - *middle*
+- **OpenID** 🌿
+  > One of the first popular SSO. Yields to Oauth2 in popularity, but is also used somewhere.
 
-### Encryption
+- **Ldap** 🌿
+  > This type of authorization is most often used for authorizing own employees in internal services.
 
-- **Symmetric encryption**: AES - *middle*
-- **Asymmetric encryption**: RSA - *middle*
-- **Hashing**: SHA-256, SHA-3 - *junior*
-- **Encryption at rest and in transit** - *middle*
+- **JSON Web Token (JWT)** 🌿
+  > This is not an authorization type, but a tool for transmitting identifying data. However, such a token can have very wide application, not only in authorization.
 
-### Security Headers
+### Types of Attacks
 
-- **Content-Security-Policy (CSP)** - *middle*
-- **X-Frame-Options** - *middle*
-- **X-Content-Type-Options** - *middle*
-- **Strict-Transport-Security (HSTS)** - *middle*
-
-### OWASP
-
-- **OWASP Top 10** - *middle*
-  > Familiarize yourself with the most critical web application security risks
-
-### Security Best Practices
-
-- **Principle of least privilege** - *middle*
-- **Defense in depth** - *middle*
-- **Input validation** - *junior*
-- **Secure defaults** - *middle*
-- **Regular security updates** - *junior*
-- **Security audits and penetration testing** - *middle+*
-
-### API Security
-
-- **API keys** - *middle*
-- **Rate limiting and throttling** - *middle*
-- **API Gateway** - *middle+*
+- **Types of attacks and vulnerabilities** 🌱
+- **Phishing site** 🌱
+- **Insecure redirect, Open Redirect** 🌱
+- **Injections (for example SQL injections)** 🌱
+- **XSS attack** 🌱
+- **IDOR vulnerability** 🌿
+- **CRLF attack** 🌱
+- **LFI/RFI attack** 🌱
+- **DoS/DDoS** 🌿
+- **HTTP-flood** 🌿
+- **SYN flood** (TCP knowledge required) 🌳
+- **UDP flood** (UDP amplification) 🌳
+- **Slow request** 🌿
+- **Bombs** 🌿
+- **Logic Bomb** 🌿
+- **Zip Bomb** 🌱
+- **Man In The Middle attack (MITM)** 🌿
+- **Brute force** (for example password brute force) 🌱
+- **Spoofing** 🌿
 
 ---
 
 ## Stage 8. Your Programming Language
 
-*This section depends on your chosen backend language. Here are common topics you should cover:*
+There are many programming languages. However, they have a lot in common, some more, some less. This stage will only touch on frequently encountered items in most popular programming languages. The stage will not be clearly divided into gradations, as much depends on the language itself, its capabilities and its extensions.
 
-### Language Fundamentals
+**Principle of working with this section**: search %your_programming_language% %item_from_stage%. Note that some items may not exist in your language.
 
-- **Syntax and basic constructs** - *junior*
-- **Data types** - *junior*
-- **Control flow** - *junior*
-- **Functions** - *junior*
-- **Error handling** - *junior*
+- **What is interpreter, compiler, JIT, op-code, byte-code. What of this does your language use?** 🌱
+- **Your programming language** 🌱
+- **Primitive data types**
+  > Basic scalar types — integers, strings, boolean values, floating point numbers, null/nil and so on.
 
-### Object-Oriented Programming
+- **Functions, macros**
+  - Definition and their call
+  > Ability to define a simple function and call it. There are languages where functions without objects cannot exist.
 
-- **Classes and objects** - *junior*
-- **Inheritance** - *junior*
-- **Polymorphism** - *middle*
-- **Encapsulation** - *junior*
-- **Interfaces / Traits** - *middle*
+  - Main function or program entry point
+  > In a language, a program may only start through a startup function, for example main(). But some languages allow launching a file with code.
 
-### Functional Programming
+- **Set, array, hash table (associative array), tuple**
+  > Represents various combinations of primitive types. For example, a numeric data array can be made in almost any language.
 
-- **Pure functions** - *middle*
-- **Immutability** - *middle*
-- **Higher-order functions** - *middle*
-- **Map, filter, reduce** - *middle*
+- **Objects/classes/structures, prototypes/interfaces/mixins**
+  > All modern languages have objects and can operate them.
+
+- **Operator overloading**
+  > Allows objects themselves to define how to perform mathematical, logical and other actions (operations) on them.
+
+- **Method overloading**
+  > Allows defining multiple methods with one name but different signature. As a rule, this is achieved through a different set of parameters (number or types of accepted values) for each method.
+
+- **Generics (aka templates aka generalizations)**
+  > Specific capability of some strongly typed programming languages. Allows defining a single signature for processing different types.
+
+### Object-Oriented Programming (OOP)
+
+- **Object-Oriented Programming (OOP)**
+- **References, weak references**
+- **Variable scope**
+  > It's important to understand when your variables are accessible in code and where they are not yet/already not. This is especially important to understand when working with references.
+
+### Garbage Collector
+
+- **Garbage Collector (GC)**
+  > Many high-level (and not only) languages have GC. GC is responsible for freeing memory from garbage (forgotten data, data that code no longer needs) during code execution. This is a very important part of your language, as while GC is working — your code is not working. And if GC works often and/or a lot, your application will start to lag and "hang".
+
+- When and how GC is launched
+- Study GC settings
+- Enabling/disabling GC, forced GC launch
+- Profiling leaks or memory consumption
+
+### Type System
+
+- **Type conversion**
+- **Weak/strong typing in code. What it affects and how to live with it**
+  > Strong typing requires explicit indication in code of the data type that will be used in a variable, argument, etc. And dynamic, on the contrary, allows not to specify the type. Calculation of value type will occur dynamically, at the moment of program/program code execution (runtime). Some languages can support both strong and weak typing simultaneously.
+
+- **Bit operations**: not, and, or, xor, shift left, shift right 🌱
+  > Often instead of or and and symbols |/|| and &/&& are used. You can encounter bit operations more often than it seems, many functions/methods accept options in the form of bit flags like READ|WRITE|CREATE. You need to be able to combine bit flags, delete, determine which flags are set.
+
+### Error Handling
+
+- **Error handling. Exceptions, panics, error and other error manifestations**
+  > You always need to handle errors. It's important to know which errors you can catch (handle) and which you can't. There are errors that can be caught and handled, and there are errors that will crash the application. Note that some languages can catch any error, but will still have to restart the application.
+
+- Understanding error stack trace
+
+### Types and Concepts
+
+- **Value vs Reference**
+  > Copying by value or copying by reference and where. It's important to understand when you're passing a copy of data and when you're passing a link to data. It's easy to shoot yourself in the foot here, changing values not where you intended.
+
+- **Mutable and immutable**
+  > Some types or values can be changed and some cannot. Knowing where your data can change and where it can't will help prevent some bugs.
+
+- **Static and dynamic types**
+  > Static - types defined at compilation (if language has compilation). Dynamic - types determined at execution.
+
+- **Lazy and eager evaluation**
+  > Lazy - calculated when needed. Eager - calculated immediately. For example, generators in many languages are lazy.
 
 ### Concurrency
 
-- **Threads** - *middle*
-- **Locks and mutexes** - *middle*
-- **Async/await** - *middle*
-- **Promises / Futures** - *middle*
-- **Deadlocks and race conditions** - *middle+*
+- **Coroutines, goroutines, green threads**
+  > Different languages call lightweight threads differently. It's important to understand how they work in your language.
 
-### Memory Management
+- **Async/await, promises, futures**
+  > Asynchronous programming patterns. Important to understand how they work in your language.
 
-- **Stack vs Heap** - *middle*
-- **Garbage collection** - *middle*
-- **Memory leaks** - *middle*
+- **Locks, mutexes, semaphores**
+  > Synchronization primitives. Important for working with shared state.
+
+- **Race conditions, deadlocks**
+  > Common concurrency problems. Important to know how to avoid them.
+
+### Standard Library
+
+- **Working with strings**
+  > Most of the code works with strings. It's important to know the standard string processing capabilities.
+
+- **Working with dates and time**
+  > Dates and time are everywhere. It's important to know how to work with them.
+
+- **Working with files**
+  > Reading, writing, deleting files. Working with paths.
+
+- **Working with network**
+  > HTTP clients, TCP/UDP sockets.
 
 ### Package Management
 
-- **Package managers**: npm, pip, composer, cargo, maven, etc. - *junior*
-- **Dependencies management** - *junior*
-- **Semantic versioning** - *middle*
+- **Package manager of your language**
+  > npm, pip, composer, cargo, maven, etc.
+
+- **Dependency management**
+  > How to add, update, delete dependencies.
+
+- **Versioning**
+  > Semantic versioning, version constraints.
 
 ### Testing
 
-- **Unit testing** - *junior*
-- **Test frameworks** specific to your language - *junior*
-- **Mocking** - *middle*
-- **Test coverage** - *middle*
+- **Unit testing**
+  > Testing individual functions/methods.
+
+- **Test framework of your language**
+  > pytest, jest, junit, etc.
+
+- **Mocking**
+  > Mocking dependencies for testing.
+
+- **Test coverage**
+  > Measuring how much code is covered by tests.
 
 ### Popular Frameworks
 
-- **Web frameworks** for your language - *middle*
-- **ORM (Object-Relational Mapping)** - *middle*
-- **Logging libraries** - *junior*
+- **Web framework**
+  > Django, Express, Spring, etc.
+
+- **ORM**
+  > Working with databases through objects.
+
+- **Logging**
+  > Logging libraries and best practices.
+
+### Code Quality
+
+- **Linter**
+  > Static code analysis tool.
+
+- **Formatter**
+  > Code formatting tool.
+
+- **Type checker**
+  > For dynamically typed languages.
+
+### Debugging
+
+- **Debugger**
+  > How to use debugger in your language.
+
+- **Profiler**
+  > Performance profiling tools.
 
 ---
 
 ## Stage 9. Email
 
-### Email Protocols
+*(Continue from the original document...)*
 
-- **SMTP (Simple Mail Transfer Protocol)** - *middle*
-  - Sending emails
-  - SMTP servers
+**Email protocols** 🌿
+- SMTP (Simple Mail Transfer Protocol)
+  > Protocol for sending emails
+- IMAP (Internet Message Access Protocol)
+  > Protocol for receiving emails
+- POP3
+  > Another protocol for receiving emails
 
-- **IMAP (Internet Message Access Protocol)** - *middle*
-  - Reading emails
-  - Folder management
+**Email structure** 🌿
+- Headers
+- Body
+- Attachments
+- MIME types
 
-- **POP3** - *middle*
-  - Downloading emails
-  - Differences from IMAP
+**Sending email** 🌿
+- Email libraries in your language
+- Email templates
+- Transactional emails
 
-### Email Structure
-
-- **Email headers**: From, To, Subject, Date, Message-ID - *middle*
-- **MIME (Multipurpose Internet Mail Extensions)** - *middle*
-- **Multipart messages**: text and HTML - *middle*
-- **Attachments** - *middle*
-
-### Sending Email
-
-- **Email libraries** for your language - *middle*
-- **Email templates** - *middle*
-- **Transactional emails** - *middle*
-
-### Email Services
-
-- **Email service providers**: SendGrid, Mailgun, Amazon SES - *middle*
-- **Webhook handling** for email events - *middle*
-
-### Email Security
-
-- **SPF (Sender Policy Framework)** - *middle*
-- **DKIM (DomainKeys Identified Mail)** - *middle*
-- **DMARC (Domain-based Message Authentication)** - *middle+*
-
-### Email Deliverability
-
-- **Spam filters** - *middle*
-- **Email reputation** - *middle*
-- **Bounce handling** - *middle*
-- **Unsubscribe mechanisms** - *middle*
+**Email services** 🌿
+- SendGrid
+- Mailgun
+- Amazon SES
 
 ---
 
 ## Stage 10. Full-Text Search
 
-### Search Concepts
+**Search engines** 🌿
+- Elasticsearch
+  > Most popular search engine
+- Apache Solr
+- Meilisearch
 
-- **Indexing** - *middle*
-- **Tokenization** - *middle*
-- **Stemming and lemmatization** - *middle*
-- **Stop words** - *middle*
+**Search concepts** 🌿
+- Indexing
+- Tokenization
+- Stemming
+- Analyzers
+- Relevance scoring
 
-### Search Engines
-
-- **Elasticsearch** - *middle*
-  - Document indexing
-  - Query DSL
-  - Aggregations
-  - Relevance scoring
-
-- **Apache Solr** - *middle+*
-- **Meilisearch** - *middle*
-- **Typesense** - *middle*
-
-### Search Features
-
-- **Full-text search** - *middle*
-- **Fuzzy search** - *middle*
-- **Faceted search** - *middle*
-- **Autocomplete / suggestions** - *middle*
-- **Highlighting** - *middle*
-
-### Performance
-
-- **Query optimization** - *middle+*
-- **Index optimization** - *middle+*
-- **Caching strategies** - *middle*
+**Search queries** 🌿
+- Basic queries
+- Boolean queries
+- Phrase queries
+- Fuzzy search
+- Wildcards
 
 ---
 
 ## Stage 11. Logs and Metrics
 
-### Logging
+**Logging** 🌱
+- Log levels
+  > DEBUG, INFO, WARN, ERROR, FATAL
+- Structured logging
+  > JSON logs
+- Log rotation
+- Centralized logging
 
-- **Log levels**: DEBUG, INFO, WARN, ERROR, FATAL - *junior*
-- **Structured logging**: JSON logs - *middle*
-- **Log rotation** - *middle*
-- **Centralized logging** - *middle*
+**Log management** 🌿
+- ELK Stack
+  > Elasticsearch, Logstash, Kibana
+- Grafana Loki
+  > Log database based on Prometheus-like storage
 
-### Log Management Systems
+**Metrics** 🌿
+- Prometheus
+  > Popular metrics collection system
+- Metric types
+  > count, gauge, histogram, summary
+- Metric delivery
+  > push and pull
+- Queries
+  > Syntax, labels, vectors, intervals, operators
+- Key functions
+  > rate, irate
 
-- **ELK Stack** (Elasticsearch, Logstash, Kibana) - *middle*
-- **Grafana Loki** - *middle*
-  > Log database based on Prometheus-like storage with excellent Grafana integration
-
-### Metrics
-
-- **Prometheus** or similar (e.g., Victoria Metrics) - *middle*
-  > Popular metrics collection and storage system
-
-- **Metric types** - *middle*
-  - Count
-  - Gauge
-  - Histogram
-  - Summary
-
-- **Metric delivery methods**: push and pull - *middle*
-
-### Prometheus Queries
-
-- **Query syntax** - *middle*
-  - Labels
-  - Vectors
-  - Intervals
-  - Operators
-
-- **Key functions** - *middle*
-  - `rate`
-  - `irate`
-
-### Visualization
-
-- **Grafana** - *middle+*
-  > Excellent UI for displaying metrics from various storage systems, including Prometheus-like systems
+**Visualization** 🌳
+- Grafana
+  > Excellent UI for displaying metrics
   - Creating dashboards
   - Creating graphs
   - Setting up alerts
-
-### Monitoring
-
-- **Application monitoring** - *middle*
-- **Infrastructure monitoring** - *middle*
-- **Alerting** - *middle*
-- **SLA, SLO, SLI** - *middle+*
 
 ---
 
 ## Stage 12. Design and Development
 
-Patterns, concepts, and approaches to designing various web applications.
+Patterns, concepts and approaches to designing various web applications.
 
 ### Development Principles
 
-- **GRASP (General Responsibility Assignment Software Patterns)** - *middle*
-- **SOLID** - *middle*
-  - Single Responsibility
-  - Open–Closed
-  - Liskov Substitution
-  - Interface Segregation
-  - Dependency Inversion
-
-- **KISS (Keep It Simple, Stupid)** - *junior*
-- **YAGNI (You Aren't Gonna Need It)** - *junior*
-- **DRY (Don't Repeat Yourself)** - *junior*
-- **IoC (Inversion of Control)** and DI (Dependency Injection) - *middle*
-- **DDD (Domain-Driven Design)** - *middle*
+- **Development principles** 🌱
+- **GRASP** (General Responsibility Assignment Software Patterns) 🌿
+- **SOLID** (Single Responsibility, Open–Closed, Liskov Substitution, Interface Segregation, Dependency Inversion) 🌿
+- **KISS** (Keep It Simple, Stupid) 🌱
+- **YAGNI** (You Aren't Gonna Need It) 🌱
+- **DRY** (Don't Repeat Yourself) 🌱
+- **IoC** (Inversion Of Control), and as a consequence — DI (Dependency Injection) 🌿
+- **DDD** (Domain-Driven Design) 🌿
 
 ### Architectural Patterns
 
-*One project may use one or several architectural patterns, or even portions of them. Architectural patterns are approaches to solving the task assigned to the project.*
+- **Architectural patterns** 🌱
+  > One project can have one or several architectural patterns, or even half. Architectural patterns are an approach to solving the task assigned to the project.
 
-- **Hexagonal Architecture** - *middle+*
-- **Event-Driven Architecture** (aka Broker pattern) - *middle+*
-- **Onion Architecture** (aka Layered pattern) - *middle+*
-- **CQRS** (Command and Query Responsibility Segregation) - *middle+*
-- **SOA** (Service-Oriented Architecture) - *middle+*
-- **Event Sourcing** - *middle+*
+- **Hexagonal Architecture** 🌳
+- **Event-Driven Architecture** (aka Broker pattern) 🌳
+- **Onion Architecture** (aka Layered pattern) 🌳
+- **CQRS** (The Command and Query Responsibility Segregation) 🌳
+- **SoA** (Service-Oriented Architecture) 🌳
+- **Event Sourcing** 🌳
 
 ### Application Patterns
 
-- **MVC (Model-View-Controller)** - *junior*
-  > The oldest and quite widespread application design pattern, separating UI from application logic
+- **MVC pattern** 🌱
+  > The oldest and quite widespread application design pattern, separating UI from application logic.
 
-- **ADR (Action-Domain-Responder)** - *middle*
+- **ADR pattern** (Action-Domain-Responder)
   > MVC refinement for web tasks
 
-- **MVP (Model-View-Presenter)** - *junior*
-  > MVP is an iteration of MVC development due to application and UI complexity. Often used in front-end.
+- **MVP pattern** 🌱
+  > MVP is an iteration of MVC development due to application and UI complications. Often used in front-end - in browser.
 
-- **MVVM (Model-View-ViewModel)** - *middle*
-  > Actually suitable for desktop or mobile applications. Rarely used in web applications.
+- **MVVM pattern**
+  > Actually this pattern is suitable for desktop or mobile applications. Practically not used in web applications.
 
 ### Design Patterns
 
-*Patterns simplify development, as they're essentially community experience in solving various problems. Remember KISS and YAGNI to avoid falling into abstraction hell.*
+**Design patterns**
+> Patterns simplify development, as they are, essentially, community experience in solving various problems. Main thing is don't forget about KISS and YAGNI, so as not to fall into abstraction hell and complexity abyss.
 
-- **Creational patterns** - *middle*
-- **Structural patterns** - *middle*
-- **Behavioral patterns** - *middle*
+- Creational design patterns
+- Structural design patterns
+- Behavioral design patterns
 
 ### Development Methodologies
 
-*Not about scrum, agile, waterfall, planning, design, etc. This is about code writing methodologies.*
+**Development methodologies**
+> This is not about scrum, agile, waterfall, planning, design and so on. This is about code writing methodologies.
 
-- **TDD (Test Driven Development)** - *middle*
-  > Development through testing—the most famous development method requiring developers to first write tests for code, then the code itself.
+- **TDD** (Test Driven Development)
+  > Development through testing, the most famous development method, requiring developer first - writing test for code, then the code itself.
 
-- **BDD (Behavior Driven Development)** - *middle+*
-  > Extended version of TDD where you first write not a test but a description of what needs to be done, in a domain language (e.g., Gherkin).
+- **BDD** (Behavior Driven Development)
+  > Extended version of TDD, in that first not a test is written, but a description of what needs to be done, in domain language, for example Gherkin.
 
 ### Application Types
 
-*Division by UI generation method.*
+**Application types**
+> There is a division of applications by UI generation method.
 
-- **MPA (Multi-Page Application)** - *middle*
-  > Classic application type with multiple pages generated on backend to create UI.
+- **MPA** (Multi-Page Application)
+  > Classic application type, with multiple pages generated on back-end for UI creation.
 
-- **SPA (Single Page Application)** - *middle*
-  > General name for applications that live in the browser and fetch data from the server. Can be SSG, SSR, CSR, or any combination.
+- **SPA** (Single Page Application)
+  > General name for application type when application lives in browser and goes to server for data. Can be both SSG, SSR, CSR or any combination thereof.
 
-- **SSG (Static Site Generation)** - *middle*
-  > All application pages are pre-generated as static files. All dynamics are in JS. Can be both MPA and SPA.
+- **SSG** (Static Site Generation)
+  > All application pages are pre-generated into static files. Dynamics completely on JS. Can be both MPA and SPA.
 
-- **SSR (Server Side Rendering)** - *middle*
-  > Approach to page generation. Each request is processed on the server where UI is generated, then the server returns response to the client/front-end.
+- **SSR** (Server Side Rendering)
+  > Approach to application page generation. Each request is processed on server, where UI is generated, then server returns response to client on front-end.
 
-- **CSR (Client Side Rendering)** - *middle*
-  > Approach to page generation. All UI is generated in the browser using JS. JS makes server requests for data to build or modify UI. SPA is a specific case of CSR.
+- **CSR** (Client Side Rendering)
+  > Approach to application page generation. All UI is generated in browser using JS. JS makes requests to servers for data, for building or changing UI. SPA is a special case of CSR.
 
-- **PWA (Progressive Web Application)** - *middle*
-  > Literally your website as a mobile application.
+- **PWA** (Progressive Web Application)
+  > Literally your site as a mobile application.
 
 ### Testing
 
-- **Unit testing** - *junior*
-  > Testing separate (and separated from each other) product parts, usually individual functions/methods. Unit tests also serve another purpose—checking your implementation architecture. Generally, if you can't write a unit test for a function/method without involving other application components, you may need to reconsider the architecture. Good unit testing leads to good Inversion of Control (IoC).
+- **Testing** 🌱
+- **Unit testing** 🌱
+  > Testing individual (including separate from each other) product parts, usually individual functions/methods. Unit tests also carry another goal - checking your implementation architecture. As a rule, if you can't write a unit test for a function/method without involving other application components, then perhaps you should reconsider the architecture. Good Unit testing leads to good inversion of control (IoC, see above).
 
-- **Integration tests** - *middle*
-  > Complex test type. Checking functionality of an application, module, or component with another application, module, or component.
+- **Integration tests** 🌿
+  > Complex type of tests. Checking functionality of application, module, components with another application, module, component.
 
-- **End-to-End (E2E) testing** - *middle*
-  > E2E test example—testing a finished API application. Tests not application components but ready functionality.
+- **End-to-End (aka E2E aka Through testing)** 🌿
+  > Example of E2E test - testing finished API application. Not application components are tested, but ready functionality.
 
-- **Smoke tests** - *middle*
-  > Smoke tests allow testing your application's ability to work. Sometimes used for testing whether infrastructure can support your application.
+- **Smoke test** 🌿
+  > Smoke tests allow testing the very possibility of your application working. Sometimes used for testing infrastructure for the possibility of your application working in it.
 
 ### Application and Design Problems
 
-- **Technical debt** - *junior*
-  > Technical debt starts accumulating in a project from the first lines of code. Always consider it in development and plan for its elimination.
+- **Application and design problems** 🌱
+- **Technical debt** 🌱
+  > Technical debt will start accumulating in project from the first lines of code. It should always be taken into account in development and plan its elimination.
 
-- **Over-engineering** - *junior*
-  > When implementation is much larger or more complex than required. Will require massive resources for project maintenance.
+- **Over engineering** 🌱
+  > When implementation is much larger or more complex than required. Will require a heap of resources for project support.
 
-- **Premature optimization** - *junior*
-  > Resorting to optimization where it's not currently needed. Will consume massive resources during project development.
+- **Premature Optimization** 🌱
+  > Resorting to optimization where it's not required at the moment. Will take away a heap of resources at the project development stage.
 
 ### Other Concepts
 
-- **Refactoring techniques** - *middle*
-  > To eliminate technical debt, you'll need to refactor frequently.
+- **Refactoring techniques**
+  > To get rid of technical debt will have to refactor often and a lot.
 
-- **Anti-patterns** - *middle*
-  > Knowing what to do is useful, but knowing what NOT to do is equally useful.
+- **Anti-patterns**
+  > It's useful to know how to do things, but no less useful to know how NOT to do things.
 
-- **Semver (Semantic Versioning)** - *middle*
-  > The most widespread principle for application version naming. Required in some languages and package managers.
+- **Semver**
+  > The most common principle of application version naming. In some languages and package managers is mandatory to comply with.
 
 ### Distributed Systems
 
-*When an application hits the server ceiling, you have only one option—make the application work on multiple servers. This greatly complicates the application, and many resources go into maintaining data integrity and consistency.*
+**Distributed systems**
+> When application hits server ceiling then you have only one way out - force application to work on multiple servers. This greatly complicates application and many resources go to preserving data integrity and consistency.
 
-- **CAP and PACELC theorems** - *middle+*
-  > In distributed systems, you must sacrifice something. PACELC is an extended CAP theorem. These theorems describe which parameters the system must sacrifice.
+- **CAP and PACELC theorems**
+  > In distributed systems will have to sacrifice something. PACELC is extended CAP theorem. These theorems just describe what parameters system will have to sacrifice.
 
-- **Microservices architecture** - *middle+*
+- **Microservices architecture**
 
 ---
 
 ## Contributing
 
-If you want to change something (item, link, typo), create an issue or make a PR. To discuss the document, use discussions.
+If you want to change something (item, link, typo) — create an issue or make a PR. If you want to discuss the document — create a discussion in discussions.
 
 ---
 
