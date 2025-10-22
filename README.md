@@ -17,13 +17,13 @@ Stages and items are arranged in the recommended order for study. Simply follow 
 
 ## How to work with document items?
 
-Each item is easily googled and has a Wikipedia page. Links are provided if there is alternative documentation — clearer and/or more detailed. Some links may require VPN. Wikipedia links are provided for clarification if the article title is not obvious or articles could be confused.
+Each item is easily googled and has a Wikipedia page. Links are provided if there is alternative documentation - clearer and/or more detailed. Some links may require VPN. Wikipedia links are provided for clarification if the article title is not obvious or articles could be confused.
 
 Quotes indicate explanations for why you should know this and/or where you might encounter it. If there is no explanation, either it hasn't been added yet, or it's already clear.
 
 ## Is there a skill division?
 
-Each item is divided into gradations: **junior** 🌱, **middle** 🌿, **middle+** 🌳 (also known as high middle). Gradations are used to help prioritize different topics — what should be studied first. This uses the generally accepted gradation of skills and areas of responsibility, where senior is middle+ with soft skills. In this document, the maximum gradation level will be middle+, since this document focuses on hard skills.
+Each item is divided into gradations: **junior** 🌱, **middle** 🌿, **middle+** 🌳 (also known as high middle). Gradations are used to help prioritize different topics - what should be studied first. This uses the generally accepted gradation of skills and areas of responsibility, where senior is middle+ with soft skills. In this document, the maximum gradation level will be middle+, since this document focuses on hard skills.
 
 The **guru** ⚡ label means that this item is for deeper and more advanced study of the topic (if you have time).
 
@@ -31,7 +31,7 @@ The **guru** ⚡ label means that this item is for deeper and more advanced stud
 
 The document is still in the process of additions and corrections. Ideally, each item should have a gradation, an explanation, and a link to good documentation. We're far from ideal, but it's a start!
 
-If you want to change something (item, link, typo) — create an issue or make a PR. If you want to discuss the document — create a discussion in discussions.
+If you want to change something (item, link, typo) - create an issue or make a PR. If you want to discuss the document - create a discussion in discussions.
 
 ---
 
@@ -244,8 +244,8 @@ Study Linux installed in the container. Linux, de facto, is the server OS for mo
 - **System logs. Why and how to view** 🌿
   > When problems occur, logs are the only thing that can lead to the essence of the problem. In addition to application logs, it's worth looking at system logs, sometimes its problem can lead to problems in applications. Some logs worth highlighting:
 
-- **dmesg** (driver messages) — important messages from Linux components, including from OOM-killer 🌿
-- **syslog** — system log 🌿
+- **dmesg** (driver messages) - important messages from Linux components, including from OOM-killer 🌿
+- **syslog** - system log 🌿
   > There may be messages from the Linux kernel, various services, network interfaces and much more.
 
 ### Problems in Linux
@@ -360,7 +360,7 @@ Networking in development is the most important and, often, least noticeable par
 ### Network Problems
 
 - **Network problems** 🌱
-  > There are always many. But it's worth highlighting those that clearly affect network speed. For the most part, these problems are inherent to TCP, but can also appear where TCP is emulated — on another protocol (for example UDP)
+  > There are always many. But it's worth highlighting those that clearly affect network speed. For the most part, these problems are inherent to TCP, but can also appear where TCP is emulated - on another protocol (for example UDP)
 
 - **Packet loss** 🌱
 - **Reordering** 🌿
@@ -401,7 +401,7 @@ Networking in development is the most important and, often, least noticeable par
 
 ## Stage 5. Databases
 
-Without databases — nowhere. The most common type of database is relational databases. Therefore, even junior should be able to work with them, but NoSQL databases can be familiarized with a little later.
+Without databases - nowhere. The most common type of database is relational databases. Therefore, even junior should be able to work with them, but NoSQL databases can be familiarized with a little later.
 
 ### Relational Databases
 
@@ -428,7 +428,7 @@ Without databases — nowhere. The most common type of database is relational da
 **Performance diagnostics**
 > Slow queries will always appear, and the more there are, the slower your application will work. And as a rule, different databases always have analytics for finding "bottlenecks".
 
-- **Maintaining slow query logs** — slow_log 🌿
+- **Maintaining slow query logs** - slow_log 🌿
   > You can't sit all the time monitoring all queries. It's easier to set up aggregation of slow queries.
 
 - **Reading analytics and statistics** 🌳
@@ -491,7 +491,7 @@ Without databases — nowhere. The most common type of database is relational da
 
 ### NoSQL Databases
 
-- **Document-oriented database** (part of NoSQL databases) — MongoDB 🌿
+- **Document-oriented database** (part of NoSQL databases) - MongoDB 🌿
   > Among all NoSQL, MongoDB is the most popular.
 
 - **Data types in collections**, their purpose and differences 🌿
@@ -692,7 +692,7 @@ There are many programming languages. However, they have a lot in common, some m
 - **What is interpreter, compiler, JIT, op-code, byte-code. What of this does your language use?** 🌱
 - **Your programming language** 🌱
 - **Primitive data types**
-  > Basic scalar types — integers, strings, boolean values, floating point numbers, null/nil and so on.
+  > Basic scalar types - integers, strings, boolean values, floating point numbers, null/nil and so on.
 
 - **Functions, macros**
   - Definition and their call
@@ -726,7 +726,7 @@ There are many programming languages. However, they have a lot in common, some m
 ### Garbage Collector
 
 - **Garbage Collector (GC)**
-  > Many high-level (and not only) languages have GC. GC is responsible for freeing memory from garbage (forgotten data, data that code no longer needs) during code execution. This is a very important part of your language, as while GC is working — your code is not working. And if GC works often and/or a lot, your application will start to lag and "hang".
+  > Many high-level (and not only) languages have GC. GC is responsible for freeing memory from garbage (forgotten data, data that code no longer needs) during code execution. This is a very important part of your language, as while GC is working - your code is not working. And if GC works often and/or a lot, your application will start to lag and "hang".
 
 - When and how GC is launched
 - Study GC settings
@@ -951,7 +951,7 @@ Patterns, concepts and approaches to designing various web applications.
 - **KISS** (Keep It Simple, Stupid) 🌱
 - **YAGNI** (You Aren't Gonna Need It) 🌱
 - **DRY** (Don't Repeat Yourself) 🌱
-- **IoC** (Inversion Of Control), and as a consequence — DI (Dependency Injection) 🌿
+- **IoC** (Inversion Of Control), and as a consequence - DI (Dependency Injection) 🌿
 - **DDD** (Domain-Driven Design) 🌿
 
 ### Architectural Patterns
@@ -1075,7 +1075,7 @@ Patterns, concepts and approaches to designing various web applications.
 
 ## Contributing
 
-If you want to change something (item, link, typo) — create an issue or make a PR. If you want to discuss the document — create a discussion in discussions.
+If you want to change something (item, link, typo) - create an issue or make a PR. If you want to discuss the document - create a discussion in discussions.
 
 ---
 
